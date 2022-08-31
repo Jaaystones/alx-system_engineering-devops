@@ -1,4 +1,6 @@
 #!/bin/bash
-cp -u *.HTML
+cp -nu *.html ..
+
+
 
 
