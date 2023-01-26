@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script is displaying "Betty School" 10 times using for
+
+for _ in {0..9};
+do 
+	echo "Betty School"; 
+done
