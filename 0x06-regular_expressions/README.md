@@ -44,19 +44,13 @@ Follow the following instructions to get a copy of the program and run in your l
 
 * Clone the following repository.
 ```
-https://github.com/PabloYepes27/holberton-system_engineering-devops/0x06-regular_expressions.git
+https://github.com/Jaaystones/alx-system_engineering-devops/0x06-regular_expressions.git
 ```
-
-* Run the program
-```
-./holberton
-```
-
 ---
 
 ## Tasks:clipboard:
 
-### [0. Simply matching Holberton](./0-simply_match_holberton.rb)
+### [0. Simply matching School](./0-simply_match_school.rb)
 * 
 
 
@@ -105,7 +99,7 @@ https://github.com/PabloYepes27/holberton-system_engineering-devops/0x06-regular
 
 ## Resources:books:
 
-* [Regular expressions - Concepts page](https://intranet.hbtn.io/concepts/29)
+* [Regular expressions - Concepts page](https://intranet.alxswe.com/projects/78)
 * [Regular expressions - Basicsd](https://www.slideshare.net/neha_jain/introducing-regular-expressions)
 * [Regular expressions - advanced](https://www.slideshare.net/neha_jain/advanced-regular-expressions-80296518)
 * [Rubular is your best friend](https://rubular.com/)
