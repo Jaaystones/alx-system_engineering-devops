@@ -3,7 +3,6 @@
 <gif  width="520"  alt="image"  src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/4e6a0ad87a65d7054248.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20200707%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200707T013444Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=28ff4164820c52aaeac66c0dbd46b79b8a0241bf5bdc2b7eb03ef621153d47ef">
 
 ## Contents:open_file_folder:
-
 - Project Description:newspaper:
 - General Objectives:bulb:
 - Instalation:wrench:
@@ -14,11 +13,7 @@
 	* How to use it
 	* examples
 
-- Unittests:boom:
-- Tasks:clipboard:
-- Built with:hammer:
-- Resources:books:
-- Author:black_nib:
+- Code environment:Git Bash:computer:
 
 ---
 
@@ -105,11 +100,7 @@ https://github.com/Jaaystones/alx-system_engineering-devops.git
 
 ### [5. Is the host on the network](./5-is_the_host_on_the_network)
 * 
-
-
 ---
-
-## Built with:hammer:
 
 
 ---
