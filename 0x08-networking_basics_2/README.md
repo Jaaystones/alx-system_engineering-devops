@@ -12,7 +12,7 @@
 * What is 0.0.0.0?
 
 
-### [2. Change your home IP](./2-change_your_home_IP)
+### [2. Change your home IP](https://github.com/Jaaystones/alx-system_engineering-devops/blob/master/0x08-networking_basics_2/1-show_attached_IPs)
 * Write a Bash script that configures an Ubuntu server with the below requirements.
 
 
