@@ -16,7 +16,7 @@
 * Write a Bash script that configures an Ubuntu server with the below requirements.
 
 
-### [3. Show attached IPs](./3-show_attached_IPs)
+### [3. Show attached IPs](https://github.com/Jaaystones/alx-system_engineering-devops/blob/master/0x08-networking_basics_2/1-show_attached_IPs)
 * Write a Bash script that displays all active IPv4 IPs on the machine it’s executed on.
 
 
