@@ -71,5 +71,5 @@ Read or watch:
 * [HTTP redirection](https://moz.com/learn/seo/redirection)
 * [Not found HTTP response code](https://en.wikipedia.org/wiki/HTTP_404)
 * [Logs files on Linux](https://www.cyberciti.biz/faq/ubuntu-linux-gnome-system-log-viewer/)
-
+* [promo code for .tech](https://intranet.alxswe.com/dashboards/my_tools)
 ---
