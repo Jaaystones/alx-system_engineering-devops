@@ -5,5 +5,5 @@ sudo apt-get update
 sudo apt-get install nginx
 
 # Insert X-served header
-echo 'http { add_header X-Served-By $hostname; }' | sudo tee -a /etc/nginx/nginx.conf
+echo "http { add_header X-Served-By $hostname; }" | sudo tee -a /etc/nginx/nginx.conf
 sudo systemctl restart nginx
