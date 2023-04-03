@@ -1,19 +1,10 @@
 #!/usr/bin/env bash
-# Configures a new Ubuntu machine with nginx - 
+#configures a new Ubuntu machine nginx
 
-apt-get -y update && apt-get -y install nginx 
-mkdir -p /srv/www
-echo "Hello World!" | sudo tee /var/www/index.html  
-rm -f /etc/nginx/sites-enabled/default 
-echo -e "
-server {
-	listen 80 default_server;
-	root /var/www;
-	index index.html index.htm;
-
-	location /redirect_me {
-		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
-	}
-}" | sudo tee /etc/nginx/sites-available/www 
-ln -sf /etc/nginx/sites-available/www /etc/nginx/sites-enabled/ 
-sudo nginx -t && sudo service nginx restart
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo ufw allow 'Nginx HTTP'
+echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
+new_string="listen 80 default_server;\\n\\tlocation \/redirect_me {\\n\\t\\treturn 301 https:\/\/www.youtube.com\/;\\n\\t}"
+sudo sed -i "s/listen 80 default_server;/$new_string/" /etc/nginx/sites-enabled/default
+sudo service nginx start
