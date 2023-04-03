@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # The command(s) used to fix the issue!
 echo "Hello Holberton" > /var/www/html/index.html
-service apache2 restart
+sudo service apache2 start
 
