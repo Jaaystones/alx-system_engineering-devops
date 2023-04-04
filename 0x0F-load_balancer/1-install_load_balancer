@@ -13,14 +13,14 @@ sudo apt-get install haproxy=2.7.\* -y
 # edit config file
 ubuntu_server_config=\
 "
-frontend  http_frontend
+frontend  http_front
         bind *:80
         mode http
-        default_backend http_backend
-backend http_backend
+        default_backend http_back
+backend http_back
         balance roundrobin
-        server 149568-web-01 52.87.216.6:80 check
-        server 149568-web-02 54.175.46.5:80 check
+        server web-01 52.87.216.6:80 check
+        server web-02 54.175.46.5:80 check
 "
 echo "$ubuntu_server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
@@ -29,4 +29,3 @@ echo "$ubuntu_server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 # Restart server
 sudo systemctl restart haproxy
-
