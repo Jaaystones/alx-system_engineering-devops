@@ -17,7 +17,7 @@ frontend  http_frontend
         bind *:80
         mode http
         default_backend http_backend
-backend yonas-backend
+backend http_backend
         balance roundrobin
         server 149568-web-01 52.87.216.6:80 check
         server 149568-web-02 54.175.46.5:80 check
