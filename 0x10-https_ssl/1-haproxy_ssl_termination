@@ -33,20 +33,17 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  http_front
+frontend  http_front-http
         bind *:80
         mode http
         http-request set-header X-Forwarded-Proto http
         default_backend http_back
-frontend  http_front
-        bind *:443 ssl crt /etc/haproxy/certs/stonegrowthcompany.tech.pem
-        mode http
+frontend  http_front-https
+        bind *:443 ssl crt /etc/haproxy/certs/www.stonegrowthcompany.tech/fullchain.pem
+        http-request set-header X-Forwarded-Proto https
         default_backend http_back
 backend http_back
+        redirect scheme https if ! { ssl_fc }
         balance roundrobin
         server web-01 52.87.216.6:80 check
         server web-02 54.175.46.5:80 check
-        redirect scheme https if !{ ssl_fc }
-    reqadd X-Forwarded-Proto:\ https
-    acl url_root path -i /
-    http-request redirect location / if url_root
