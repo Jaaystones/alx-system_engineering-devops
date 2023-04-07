@@ -39,7 +39,7 @@ frontend  http_front-http
         http-request set-header X-Forwarded-Proto http
         default_backend http_back
 frontend  http_front-https
-        bind *:443 ssl crt /etc/haproxy/certs/www.stonegrowthcompany.tech.pem
+        bind *:443 ssl crt /etc/letsencrypt/live/www.stonegrowthcompany.tech/fullchain.pem
         http-request set-header X-Forwarded-Proto https
         default_backend http_back
 backend http_back
