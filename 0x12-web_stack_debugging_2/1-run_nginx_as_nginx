@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Run Nginx as Nginx
+
+# Stop the nginx service if it is already running
+systemctl stop nginx.service
+
+# Create the nginx user and group if they don't exist
+getent group nginx || groupadd nginx
+getent passwd nginx || useradd -r -g nginx -s /sbin/nologin -d /var/cache/nginx -c "nginx user" nginx
+
+# Change the ownership of Nginx directories to nginx user and group
+chown -R nginx:nginx /var/log/nginx /var/lib/nginx /var/run/nginx /usr/share/nginx/html
+
+# Edit the Nginx configuration to run as the nginx user
+sed -i 's/user\s\+nginx;/user nginx nginx;/' /etc/nginx/nginx.conf
+
+# Restart Nginx to apply the changes
+nginx -s reload
