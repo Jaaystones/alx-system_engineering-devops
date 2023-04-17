@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
-# Run Nginx as Nginx
+# script that changes the user as nginx instead of root
 
-# Stop the nginx service if it is already running
-systemctl stop nginx.service
+# kill another server process 
+# also because apache2 is using port 8080
+pkill -f apache2
 
-# Create the nginx user and group if they don't exist
-getent group nginx || groupadd nginx
-getent passwd nginx || useradd -r -g nginx -s /sbin/nologin -d /var/cache/nginx -c "nginx user" nginx
+# change owner and group of ngninx configuraiton file
+chown nginx:nginx /etc/nginx/nginx.conf
 
-# Change the ownership of Nginx directories to nginx user and group
-chown -R nginx:nginx /var/log/nginx /var/lib/nginx /var/run/nginx /usr/share/nginx/html
+# give all permision for user of nginx config file
+chmod 700 /etc/nginx/nginx.conf
 
-# Edit the Nginx configuration to run as the nginx user
-sed -i 's/user\s\+nginx;/user nginx nginx;/' /etc/nginx/nginx.conf
+# nginx must be listening on all active IPs on port 8080
+sed -i 's/80 default_server/8080 default_server/' /etc/nginx/sites-available/default
 
-# Restart Nginx to apply the changes
-nginx -s reload
+# restart nginx with the prev config
+sudo -u nginx service nginx start
