@@ -5,6 +5,7 @@
 import requests
 from sys import argv
 
+
 def API_request(args):
     """API"""
     t = "https://jsonplaceholder.typicode.com/todos/?userId=" + str(argv[1])
@@ -27,6 +28,7 @@ def API_request(args):
           .format(name_user, count_true, count_total))
     for task in list_carlitos:
         print("\t " "{}".format(task.get('title')))
+
 
 if __name__ == "__main__":
     API_request(argv)

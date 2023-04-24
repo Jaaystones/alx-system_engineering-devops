@@ -5,6 +5,7 @@ import csv
 import requests
 from sys import argv
 
+
 def export_csv(args):
     """Export csv"""
     t = "https://jsonplaceholder.typicode.com/todos/?userId=" + str(argv[1])
@@ -21,5 +22,7 @@ def export_csv(args):
         for count in dic_t:
             my_writer.writerow([str(argv[1]), str(name_user),
                                 str(count['completed']), (count['title'])])
+
+
 if __name__ == "__main__":
     export_csv(argv)
