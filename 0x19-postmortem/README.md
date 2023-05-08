@@ -7,7 +7,7 @@
 
 * Impact: The Nginx server was down, resulting in slow loading times for the company's e-commerce website. Approximately 85% of users were affected, and some reported error messages when trying to access the site.
 
-## Timeline:
+# Timeline:
  • 10:00 AM: The issue was detected by a customer who reported slow loading times and error messages when trying to access the website.
  • 10:05 AM: An engineer noticed that the Nginx server was unresponsive and attempted to restart it.
  • 10:10 AM: The engineer received an error message stating that the server could not be restarted.
@@ -22,13 +22,13 @@
 The root cause of the issue was an outdated version of Nginx that was vulnerable to a known exploit. This allowed an attacker to overload the server and bring it down. The issue was fixed by updating Nginx to the latest version and restarting the server. This prevented the exploit from being used to bring down the server again.
 Corrective and preventative measures:
 
-## To prevent similar issues in the future, the infrastructure team will implement the following measures:
+# To prevent similar issues in the future, the infrastructure team will implement the following measures:
  • Regularly check for updates to server software and apply them in a timely manner.
  • Implement a monitoring system that alerts the team when CPU usage on a server is abnormally high.
  • Conduct regular security audits to identify potential vulnerabilities and address them before they can be exploited.
  • Provide training to all engineers and staff on security best practices to minimize the risk of human error causing a security breach.
 
-## TODO:
+# TODO:
  • Patch all servers running outdated software.
  • Set up monitoring alerts for high CPU usage on all servers.
  • Conduct a security audit of all servers and implement any necessary changes.
