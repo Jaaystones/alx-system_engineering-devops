@@ -1,4 +1,4 @@
-<img align="center" alt="Coding" width="450" height="400" src=https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/294/pQ9YzVY.gif>
+<img align="center" alt="Coding" width="700" height="300" src=https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/294/pQ9YzVY.gif>
 
 ## A Post Moterm on server failure
 
