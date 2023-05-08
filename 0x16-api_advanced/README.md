@@ -83,6 +83,6 @@ https://github.com/PabloYepes27/holberton-system_engineering-devops.git
  
 ## Author:black_nib:
  
-* **Juan Pablo Yepes Tamayo**
+* **Jaaystones**
  - [GitHub](https://github.com/Jaaystones)
  - [Twitter](https://twitter.com/Jaaystones)
